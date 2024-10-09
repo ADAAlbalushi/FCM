@@ -42,9 +42,4 @@ You will need the following:
 
 2.  Libraries and extensions:
 
--   NetLogo: The first time running the Netlogo file, you will get a
-    windows to install the time extension. Follow the instructions to
-    install it.
--   Rstudio: The first time that you open the R project execute the
-    `renv::restore()` in the R console to load the required libraries.
-    You can explore the library requirements in the `renv.lock` file.
+-  
