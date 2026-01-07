@@ -47,7 +47,7 @@ If Python 3 is not installed or you need a newer version:
 
 2. Download the data and code files using the following links for [code](https://code.zip) and [data](https://-data.zip).
 
-3. Extract both zip files and move them to `swc-python` 
+3. Extract both zip files and move them to `FCM` 
 
 4. Download the `requirements.txt` from this repository file into your `swc-python` directory. Alternatively, create a `requirements.txt` file with the following content:
 
@@ -116,7 +116,7 @@ Make sure you've installed all packages from requirements.txt and your virtual e
 
 ## Getting Help
 
-If you encounter any issues during setup, please contact your instructor before the workshop begins.
+If you encounter any issues during setup, please contact the author.
 
 ## Deactivating Virtual Environment
 
@@ -125,33 +125,33 @@ When you're done working, you can deactivate the virtual environment:
 ```bash
 deactivate
 ```
-## Dataset: Arthritis Inflammation Cure
+## Dataset: Fuzzy cognitive maps
 
-Our imaginary colleague "Dr. Maverick" has invented a new miracle drug that promises to cure arthritis inflammation flare-ups after only 3 weeks since initially taking the medication! 
+The dataset includes CSV spreadsheets that contain **matrixes detailing the number of concepts and their respective relationships**. 
 
-Naturally, we wish to see the clinical trial data, and after months of asking for the data they have finally provided us with a CSV spreadsheet containing the clinical trial data.
-
-The CSV file contains **the number of inflammation flare-ups per day** for the **60 patients** in the initial clinical trial, with the trial lasting **40 days**.
-
-**Each row corresponds to a patient, and each column corresponds to a day in the trial.** Once a patient has their first inflammation flare-up they take the medication and wait a few weeks for it to take effect and reduce flare-ups.
-
-To see how effective the treatment is we would like to:
-- Calculate the average inflammation per day across all patients.
-- Plot the result to discuss and share with colleagues.
-
-![](https://swcarpentry.github.io/python-novice-inflammation/fig/lesson-overview.svg)
+**The data folder contains the 8 FCM files (CSV) used for the weight matrix and the concept labels file (CSV).**
 
 ### Data Format
+The datasets are stored in comma-separated values (CSV) format. Each file represents a Fuzzy Cognitive Map (FCM) encoded as an adjacency matrix.
+**In each matrix:**
+- Rows and columns correspond to concepts within the FCM.
+- The cell value at row i and column j represents the causal influence of concept i on concept j.
 
-The data sets are stored in comma-separated values (CSV) format:
-- each row holds information for a single patient,
-- columns represent successive days.
+**Values are real numbers, where:**
+- Positive values indicate a positive (reinforcing) causal relationship,
+- Negative values indicate a negative (balancing) causal relationship,
+- A value of 0 indicates no direct causal relationship between the two concepts.
 
-The first three rows of our first file look like this:
+*Diagonal elements are always zero, as self-loops are not considered.*
+
+Each FCM matrix is square, meaning it has an equal number of rows and columns, corresponding to the total number of concepts included in that map. Concept labels (e.g., C1, C2, C3) are consistent across rows and columns to ensure interpretability and comparability.
+**Example**
+The adjacency matrix of the first FCM file is structured as follows:
+```bash
+        C2          C3          C1
+C2   0.000000    0.610116    0.000000
+C3   0.000000    0.541304    0.130328
+C1  -0.722442    0.000000    0.000000
+
 ```
-0,0,1,3,1,2,4,7,8,3,3,3,10,5,7,4,7,7,12,18,6,13,11,11,7,7,4,6,8,8,4,4,5,7,3,4,2,3,0,0
-0,1,2,1,2,1,3,2,2,6,10,11,5,9,4,4,7,16,8,6,18,4,12,5,12,7,11,5,11,3,3,5,4,4,5,5,1,1,0,1
-0,1,1,3,3,2,6,2,5,9,5,7,4,5,4,15,5,11,9,10,19,14,12,17,7,12,11,7,4,2,10,5,4,2,2,3,2,2,1,1
-```
-- Each number represents the number of inflammation bouts that a particular patient experienced on a given day. 
-- For example, value `6` at row `3` column `7` of the data set above means that the third patient was experiencing inflammation six times on the seventh day of the clinical study.
+**The information below guides you through running the code. The main outputs are the CSV files, figures, and tables representing the results assessment of this project, located in the Analysis and output folders.**
