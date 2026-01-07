@@ -45,7 +45,7 @@ If Python 3 is not installed or you need a newer version:
 
 1. Create a directory called `FCM`, preferably in your Desktop for easier finding.
 
-2. Download the data and code files using the following links for [code](https://swcarpentry.github.io/python-novice-inflammation/files/code/python-novice-inflammation-code.zip) and [data](https://swcarpentry.github.io/python-novice-inflammation/data/python-novice-inflammation-data.zip).
+2. Download the data and code files using the following links for [code](https://code.zip) and [data](https://-data.zip).
 
 3. Extract both zip files and move them to `swc-python` 
 
