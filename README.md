@@ -1,8 +1,18 @@
-# UT Python Carpentries Training
+# Participatory Fuzzy Cognitive Mapping: Structuring Integrated Socio-Ecological Knowledge for Heritage Management
+## overview
+- This project focuses on the construction and analysis of Fuzzy Cognitive Maps (FCMs) as part of a research project related to heritage management. FCMs are used for modeling the relationships and impacts of various concepts within the system, helping to simulate and analyze potential outcomes based on concept interactions.
+This repository provides access to the materials (code-data), software-environments (Jupyter Notebook), and the steps for reproducing the results for the project Modeling complex challenges utilizing insights from stakeholders and experts in heritage management: Novel methodologies in fuzzy cognitive mapping that focused on creating and analyzing Fuzzy Cognitive Maps (FCMs).
 
-Welcome to the Python Software Carpentries training.  Please follow these instructions to set up your environment before the workshop.
+**The analysis includes three components: FCM Analysis focusing on Individual Heterogeneity, FCM aggregation, and the Collective FCM model's Structural and Influence Analysis.**
 
-### Trainer: Adhitya Bhawiyuga (PhD Candidate at UT-ITC)
+*The information below guides you through running the code. The main outputs are the CSV files, figures, and tables representing the results assessment of this project, located in the Analysis and output folders.*
+
+### Concept Inventory:
+- Generating an inventory of concepts and connections mentioned by stakeholders using CSV files.
+- In this project, a list of terms based on the UNESCO factor list that influences the World Cultural Heritage Sites (WCHS) has been used.
+- Standardized techniques were employed to merge similar concepts, and the results were presented in a table referred to as the Concept labels.CSV.
+
+### Author: Amira.D (PhD Candidate at UT-ITC)
 
 ## Prerequisites
 
@@ -146,7 +156,7 @@ The datasets are stored in comma-separated values (CSV) format. Each file repres
 
 Each FCM matrix is square, meaning it has an equal number of rows and columns, corresponding to the total number of concepts included in that map. Concept labels (e.g., C1, C2, C3) are consistent across rows and columns to ensure interpretability and comparability.
 **Example**
-The adjacency matrix of the first FCM file is structured as follows:
+The adjacency matrix of FCM file is structured as follows:
 ```bash
         C2          C3          C1
 C2   0.000000    0.610116    0.000000
@@ -154,4 +164,14 @@ C3   0.000000    0.541304    0.130328
 C1  -0.722442    0.000000    0.000000
 
 ```
-**The information below guides you through running the code. The main outputs are the CSV files, figures, and tables representing the results assessment of this project, located in the Analysis and output folders.**
+## Workflow
+The overall workflow for the FCM analysis includes the following key steps:
+
+**Exploring FCMs Properties:**
+  - Input data, including the weight matrix and concept labels, are read from the Data folder. This includes files like EXPFCM(i).csv which contains the weight matrix of the FCM.
+  - Notebook: 01 Exploring FCMs Properties.ipynb
+**FCM Construction and Aggregation:**
+  -The FCM is developed by employing the weight matrix of individual FCMs through qualitative and quantitative aggregation processes, resulting in the final merged FCM.
+  -Notebook:02 FCM Construction and Aggregation.ipynb
+**Collective FCM model's Structural and Influence Analysis**
+  -
