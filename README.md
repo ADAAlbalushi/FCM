@@ -55,7 +55,7 @@ If Python 3 is not installed or you need a newer version:
 
 1. Create a directory called `FCM`, preferably in your Desktop for easier finding.
 
-2. Download the data and code files using the following links for [code](https://code.zip) and [data](https://-data.zip).
+2. Download the data and code files using the following links for [code](https://code.zip) and [data]([https://(https://github.com/ADAAlbalushi/FCM/blob/main/Data.zip)).
 
 3. Extract both zip files and move them to `FCM` 
 
@@ -105,7 +105,7 @@ If Python 3 is not installed or you need a newer version:
 
 To verify your setup is correct, ensure:
 
-- [ ] You are in the `swc-python` directory
+- [ ] You are in the `FCM` directory
 - [ ] The virtual environment is activated (you see `(venv)` in your prompt)
 - [ ] All packages are installed without errors
 - [ ] Jupyter Lab opens in your browser
